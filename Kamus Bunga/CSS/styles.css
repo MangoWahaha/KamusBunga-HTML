@@ -1,0 +1,88 @@
+:root {
+    --primary-color: #E91E63;
+    --secondary-color: #FF9800;
+    --accent-color: #9C27B0;
+    --bg-color: #FFF8E1;
+    --text-color: #4A4A4A;
+    --success-color: #4CAF50;
+    --warning-color: #FFC107;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(255, 248, 224);
+    border-bottom: 1px solid var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--accent-color);
+}
+
+.navbar .navbar-nav a {
+    color: var(--text-color);
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary-color);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.3rem;
+    border-top: 0.1rem solid var(--primary-color);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.9);
+}
+
+.navbar .navbar-extra a {
+    color: var(--text-color);
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary-color);
+}
+
+#menu {
+    display: none;
+}
